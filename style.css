@@ -1,0 +1,27 @@
+body { font: 1rem/1.6 system-ui; max-width: 46rem; margin: 2rem auto; padding: 1rem; }
+label { display: block; margin-top: 1rem; }
+input, select, textarea, button { font: inherit; max-width: 100%; }
+button { margin: 1rem .5rem 0 0; }
+.step { display: none; }
+.step.active { display: block; }
+.field-error { color: #b00020; font-weight: 600; }
+.field-error:not(:empty)::before { content: "⚠ "; }
+[aria-invalid="true"] { border: 2px solid #b00020; }
+#error-summary { border: 2px solid #b00020; padding: 1rem; }
+#error-summary a { color: #b00020; }
+:focus-visible { outline: 3px solid #3459be; outline-offset: 3px; }
+fieldset { margin-top: 1rem; }
+fieldset label { margin-top: .25rem; }
+.hint { margin: .25rem 0; color: #555; font-size: .9rem; }
+
+/* Live password checklist: state is shown by the "✓ Met" / "✗ Needed" text
+   and font weight, so color is only a supplementary cue. */
+#pwRules { list-style: none; padding-left: 0; }
+#pwRules li { color: #6b1a1a; }
+#pwRules li.met { color: #1b5e20; font-weight: 600; }
+
+/* Review summary */
+#reviewSummary h3 { margin-bottom: .25rem; }
+#reviewSummary dl { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; margin: 0; }
+#reviewSummary dt { font-weight: 600; }
+#reviewSummary dd { margin: 0; overflow-wrap: anywhere; }
